@@ -1,0 +1,13 @@
+.list {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+
+.listItem {
+  margin: 10px 0;
+}
+
+.more {
+  padding: 4px 8px;
+  margin: 10px 20px;
+}

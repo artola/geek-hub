@@ -1,0 +1,21 @@
+.bio {
+  padding: 10px;
+  margin: 10px;
+  font-style: italic;
+}
+
+.following {
+  padding: 20px 10px 20px 20px;
+}
+
+@media (prefers-color-scheme: light) {
+  .bio {
+    color: #888;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .bio {
+    color: #ddd;
+  }
+}
