@@ -36,7 +36,7 @@
     "dev": "next dev",
     "build": "next build",
     "lint": "next lint",
-    "prettify": "prettier . --write --ignore-unknown --ignore-path=.prettierignore",
+    "prettify": "prettier . --write --ignore-unknown",
     "relay": "relay-compiler",
     "start": "next start"
   }

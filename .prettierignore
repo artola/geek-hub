@@ -2,7 +2,7 @@
 node_modules/
 
 # generated
-generated/
+__generated__/
 
 # temporary
 tmp/
