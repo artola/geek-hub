@@ -21,9 +21,6 @@ out/
 # vercel
 .vercel
 
-# production
-build/
-
 # local env files
 .env*.local
 
