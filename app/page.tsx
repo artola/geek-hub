@@ -45,7 +45,7 @@ export default function Home() {
           <h2>
             Relay for Dummies <span>-&gt;</span>
           </h2>
-          <p>The Beginner's Guide to Mastering RelayJS</p>
+          <p>The Beginner’s Guide to Mastering RelayJS</p>
         </Link>
       </div>
     </main>
