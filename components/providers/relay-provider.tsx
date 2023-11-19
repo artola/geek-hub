@@ -1,5 +1,8 @@
+'use client';
+
 import {meros} from 'meros/browser';
-import {useMemo} from 'react';
+import {useState} from 'react';
+import {RelayEnvironmentProvider} from 'react-relay';
 import {
   Environment,
   FetchFunction,
@@ -107,6 +110,12 @@ function createEnvironment(): Environment {
   });
 }
 
-export function useEnvironment(): Environment {
-  return useMemo(createEnvironment, []);
+export interface RelayProviderProps {
+  children: React.ReactNode;
+}
+
+export function RelayProvider(props: RelayProviderProps) {
+  const [environment] = useState<Environment>(createEnvironment);
+
+  return <RelayEnvironmentProvider environment={environment} {...props} />;
 }

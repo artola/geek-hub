@@ -2,9 +2,6 @@
 
 import {Suspense} from 'react';
 
-import {RelayProvider} from '@/client';
-import {NoSSR} from '@/components';
-
 import styles from './page.module.css';
 import Viewer from './viewer';
 
@@ -19,13 +16,9 @@ export default function User() {
       </div>
 
       <div className={styles.content}>
-        <NoSSR>
-          <RelayProvider>
-            <Suspense fallback="loading">
-              <Viewer />
-            </Suspense>
-          </RelayProvider>
-        </NoSSR>
+        <Suspense fallback="loading">
+          <Viewer />
+        </Suspense>
       </div>
     </main>
   );
