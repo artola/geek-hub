@@ -2,5 +2,7 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
-  "typescript.preferences.importModuleSpecifier": "shortest"
+  "typescript.preferences.importModuleSpecifier": "shortest",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }
