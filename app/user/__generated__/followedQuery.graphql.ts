@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<12e9229ea78566a99290fce972dc6eb1>>
+ * @generated SignedSource<<459c32e68f23c7ac5cf5cb6fd79970e7>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -14,7 +14,7 @@ export type followedQuery$variables = Record<PropertyKey, never>;
 export type followedQuery$data = {
   readonly node: {
     readonly " $fragmentSpreads": FragmentRefs<"followedFragment">;
-  } | null | undefined;
+  } | null;
 };
 export type followedQuery = {
   response: followedQuery$data;

@@ -51,22 +51,26 @@ const fetchFn: FetchFunction = (
           await sleep(2000);
         }
 
-        const parts = await meros<any>(response);
+        if (response.ok) {
+          const parts = await meros<any>(response);
 
-        if (isAsyncIterable(parts)) {
-          for await (const part of parts) {
-            if (!part.json) {
-              sink.error(new Error('Failed to parse part as json.'));
-              break;
+          if (isAsyncIterable(parts)) {
+            for await (const part of parts) {
+              if (!part.json) {
+                sink.error(new Error('Failed to parse part as json.'));
+                break;
+              }
+
+              sink.next(part.body);
             }
-
-            sink.next(part.body);
+          } else {
+            sink.next(await parts.json());
           }
-        } else {
-          sink.next(await parts.json());
-        }
 
-        sink.complete();
+          sink.complete();
+        } else {
+          sink.error(new Error(response.statusText));
+        }
       } catch (error) {
         sink.error(error as Error);
       }

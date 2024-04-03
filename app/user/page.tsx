@@ -2,6 +2,8 @@
 
 import {Suspense} from 'react';
 
+import {ErrorBoundary} from '@/components';
+
 import styles from './page.module.css';
 import Viewer from './viewer';
 
@@ -16,9 +18,11 @@ export default function User() {
       </div>
 
       <div className={styles.content}>
-        <Suspense fallback="loading">
-          <Viewer />
-        </Suspense>
+        <ErrorBoundary>
+          <Suspense fallback="loading">
+            <Viewer />
+          </Suspense>
+        </ErrorBoundary>
       </div>
     </main>
   );

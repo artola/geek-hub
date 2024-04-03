@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<446376071b5257e515c8f174235f61cd>>
+ * @generated SignedSource<<6d54408d1496d97d34df50e315c49cd6>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -16,8 +16,8 @@ export type followingFragment$data = {
       readonly node: {
         readonly id: string;
         readonly " $fragmentSpreads": FragmentRefs<"followedFragment">;
-      } | null | undefined;
-    } | null | undefined> | null | undefined;
+      } | null;
+    } | null> | null;
   };
   readonly id: string;
   readonly " $fragmentType": "followingFragment";

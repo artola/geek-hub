@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<ddc4ac9065d78fd95a0c035a532a3ca0>>
+ * @generated SignedSource<<7f40fbe77ace75ffe38ebed560e13683>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -13,7 +13,7 @@ import { FragmentRefs } from "relay-runtime";
 export type viewerQuery$variables = Record<PropertyKey, never>;
 export type viewerQuery$data = {
   readonly viewer: {
-    readonly bio: string | null | undefined;
+    readonly bio: string | null;
     readonly login: string;
     readonly " $fragmentSpreads": FragmentRefs<"followingFragment">;
   };
