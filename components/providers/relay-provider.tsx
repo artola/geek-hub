@@ -57,8 +57,7 @@ const fetchFn: FetchFunction = (
           if (isAsyncIterable(parts)) {
             for await (const part of parts) {
               if (!part.json) {
-                sink.error(new Error('Failed to parse part as json.'));
-                break;
+                throw Error('Failed to parse part as json.');
               }
 
               sink.next(part.body);
@@ -69,7 +68,7 @@ const fetchFn: FetchFunction = (
 
           sink.complete();
         } else {
-          sink.error(new Error(response.statusText));
+          throw Error(response.statusText);
         }
       } catch (error) {
         sink.error(error as Error);
